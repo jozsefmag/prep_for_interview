@@ -194,3 +194,6 @@ let reduceArr = [1, 2, 3, 4, 5];
 let sum = reduceArr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
 console.log(sum)
+
+// Test: Remove duplicates and sort the array
+const mixedNumbers = [5, 10, 5, 20, 15, 20, 10]

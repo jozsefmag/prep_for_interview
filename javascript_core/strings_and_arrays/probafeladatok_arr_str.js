@@ -47,3 +47,39 @@ const arr = [5, 2, 10, 3, 8]
 let evenNums = arr.filter(num => num % 2 === 0)
 let multiplyEven = evenNums.reduce ((accumulator, currentvalue) => accumulator * currentvalue, 1)
 console.log(multiplyEven)
+
+// Test: Convert names to uppercase and filter those starting with "A"
+const names = ["Anna", "Mike", "Alice", "John", "Amanda"];
+let upperCase = []
+for (i = 0; i < names.length;i++){
+    upperCase.push(names[i].toUpperCase())
+}
+let upperCaseWithA = upperCase.filter(str => str.startsWith("A"))
+
+
+// Test: Calculate the average age of people over 18
+const people = [
+    { name: "John", age: 25 },
+    { name: "Jane", age: 17 },
+    { name: "Mike", age: 32 },
+    { name: "Alice", age: 15 },
+    { name: "Bob", age: 40 }
+]
+
+let peopleAge = people.map(num => num.age)
+let ageOver18 = []
+for (i = 0; i < peopleAge.length; i++){
+    if (peopleAge[i] > 18){
+        ageOver18.push(peopleAge[i])
+    }
+}
+let avrageAge = ageOver18.reduce((accumulator, currentvalue) => accumulator + currentvalue/ageOver18.length,0)
+console.log(avrageAge)
+
+// Test: Remove duplicates and sort the array
+const mixedNumbers = [5, 10, 5, 20, 15, 20, 10]
+
+let mixedSet = new Set (mixedNumbers)
+let uniqueArray = [...mixedSet]
+let sortedArray = uniqueArray.sort((a,b) => a-b)
+console.log(sortedArray)
